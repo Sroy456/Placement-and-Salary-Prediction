@@ -1,0 +1,120 @@
+
+
+.container {
+    position: relative;
+  }
+  .sd{
+    height: 400px;
+    width: 1150px;
+    position: relative;
+    right: 5%;
+  }
+  #sayantani{
+    padding: 2%;
+    margin-top: 3%;
+  }
+  .papan-form{
+    background: #F7F6F1;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #F1F1F1;
+    position: absolute;
+    right: 25%;
+    top: 12px;
+    max-width: 40%;
+    padding-bottom: 0.1%;
+    /* max-height: 100%; */
+  }
+  .papan1-form{
+    background: #F7F6F1;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #F1F1F1;
+    position: absolute;
+    right: 25%;
+    top: 12px;
+    width: 40%;
+    /* max-width: 40%; */
+    padding-bottom: 0.1%;
+    max-height: 100%;
+  }
+  #pformid{
+    margin: 3%;
+    text-decoration-color: #6A2F03;
+  }
+  #s-p-details{
+    margin: 2%;
+  }
+  .pformh2{
+    text-align: center;
+    /* text-decoration-color: */
+  }
+  .t_c{
+    font-size: 80%;
+  }
+  .b-btn-primary{
+    margin-left: 78%;
+  }
+  .b1-btn-primary{
+    margin-left: 8%;
+  }
+  .pred_salary{
+    /* background-color:#763b4d !important; */
+    border-color:#763b4d  !important;
+    border-radius: 0 !important;
+    color: #141101 !important;
+    margin-left: 42%; 
+    margin-top: 2%;
+  }
+  .pred_salary:hover{
+    background-color:#763b4d !important;
+  }
+  .b-btn-primary,.b1-btn-primary,.b2-btn-primary{
+    background-color:#763b4d !important;
+    border-color:#763b4d  !important;
+    border-radius: 0 !important;
+    color: #F7F6F1 !important;
+  }
+  
+  .p-details-a{
+    color: #F7F6F1 !important;
+  }
+  .p-details-h1{
+    text-align: center;
+    font-size: 30px;
+  }
+  .p-hr{
+    width: 15%;
+    border-width: 4px;
+    background-color: #763b4d;
+  }
+  .p-buttons{
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 20%;
+    display: inline;
+  }
+  .action_btn{
+    width: 20%;
+    margin: 0 auto;
+    display: inline;
+  }
+  .p-details,.p-details2,.p-details3{
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  .p-details,.p-details2{
+    padding-top: 3%;
+  }
+  .s-texts-p{
+    text-align: left;
+    width: 100%;
+  }
+  #piechart{
+    float: left;
+    margin-right: 2px;
+  }
+  .sp{
+    border-width: 5px;
+  }
+  

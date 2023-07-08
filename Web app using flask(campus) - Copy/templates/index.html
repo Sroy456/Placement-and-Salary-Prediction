@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>Salary and status Predictor</title>
+  </head>
+  <body>
+
+      <section id="sayantani">
+        <div class="container">
+        <img class="sd" src="static\background.png" alt="">
+        <form class="papan-form" action="/predict" method="post">
+          <section id="pformid">
+            <h2 class="pformh2">Predict Your Status</h2>
+            <hr>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="Name">Name</label>
+        <input required="1" type="text" name="Name" class="form-control" id="Name" placeholder="Name" autocomplete="off">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Email</label>
+        <input required="1" type="email" name="Email" class="form-control" id="inputEmail4" placeholder="Email" autocomplete="off">
+      </div>
+    </div>
+    
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="">SSC Percentage</label>
+        <select required="1" type="" name="ssc_p" placeholder="SSC Percentage" class="form-control" id="Amount" autocomplete="off">
+          {% for ssc_p in ssc_p %}
+            <option value="{{ ssc_p }}">{{ ssc_p }}</option>
+          {% endfor %}
+        </select>
+        </div>
+      <div class="form-group col-md-6">
+        <label for="">MBA Percentage</label>
+        <select required="1" type="" name="mba_p" placeholder="MBA Percentage" class="form-control" id="Amount" autocomplete="off">
+          {% for mba_p in mba_p %}
+            <option value="{{ mba_p }}">{{ mba_p }}</option>
+          {% endfor %}
+        </select>
+        </div>
+    </div>
+    <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck" autocomplete="off">
+        <label class="form-check-label t_c" for="gridCheck">
+          By doing this you accept all terms and conditions and you are also subscribing our page for further updates.
+        </label>
+      </div>
+    </div>
+    
+    <button type="submit" name="submit" class="btn b-btn-primary">PREDICT</button>
+    </section>
+  </form>
+  </div>
+  <br>
+  <section id="s-texts">
+    <span class="border-left-0 border-right-0 border-primary sp">
+    <div class="container">
+      
+      
+  
+  
+  
+  </span>
+
+  <div>
+    <!-- <h3 id="prediction"> {{ a }} </h3> -->
+    {% if a=="Status : Placed" %} 
+      <h3 style="color: #763b4d; text-align: center; margin-top: 15px;"><em>Congratulation {{ n }}❤️ Your profile has been shortlisted</em></h3>       
+      <h4 style="color: #080324; text-align: center; margin-top: 15px;" id="salary">Please provide few more details to predict your salary</h4>
+      <form action="/pred_salary" method="post">
+      <button class="btn pred_salary" type="submit" name="submit">Predict Salary</button>
+    </form>
+    {% else %}
+    <h3 style="color: #af0f0f; text-align: center; margin-top: 15px;"><em> Sorry {{ n }}🙁 Your profile is not selected yet</em></h3>
+    <h4 style="color: #5740da; text-align: center; margin-top: 15px;">Better Luck Next Time</h4>       
+    {% endif %}
+  </div>
+
+    </section>
+      </section>
+  
+
+
+
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  </body>
+</html>

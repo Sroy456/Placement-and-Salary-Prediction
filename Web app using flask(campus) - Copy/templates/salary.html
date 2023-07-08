@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>Salary Prediction</title>
+  </head>
+  <body>
+    
+    <section id="sayantani">
+      <div class="container">
+      <img class="sd" src="static\background.png" alt="">
+      <form class="papan1-form" action="/salary" method="post">
+        <section id="pformid">
+          <h2 class="pformh2">Predict Your Salary</h2>
+          <hr>
+  <div class="form-row">
+    <div class="form-group col-md-6">       
+      <label for="">SSC Percentage</label>    
+      <select required="1" type="" name="ssc_p" class="form-control" id="Name" placeholder="SSC Percentage" autocomplete="off">
+        {% for ssc_p in ssc_p %}
+          <option value="{{ ssc_p }}">{{ ssc_p }}</option>
+        {% endfor %}
+      </select>
+      </div>
+    <div class="form-group col-md-6">
+      <label for="">HSC Percentage</label>
+      <select required="1" type="" name="hsc_p" class="form-control" id="inputEmail4" placeholder="HSC Percentage" autocomplete="off">
+        {% for hsc_p in hsc_p %}
+            <option value="{{ hsc_p }}">{{ hsc_p }}</option>
+        {% endfor %}
+        </select>
+    </div>
+  </div>
+  
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="">hsc_s</label>
+      <select required="1" type="" name="hsc_s" placeholder="hsc_s" class="form-control" id="Amount" autocomplete="off">
+        {% for hsc_s in hsc_s %}
+          <option value="{{ hsc_s }}">{{ hsc_s }}</option>
+        {% endfor %}
+      </select>
+      </div>
+    <div class="form-group col-md-6">
+      <label for="">degree_p</label>
+      <select required="1" type="" name="degree_p" placeholder="degree_p" class="form-control" id="Amount" autocomplete="off">
+        {% for degree_p in degree_p %}
+          <option value="{{ degree_p }}">{{ degree_p }}</option>
+        {% endfor %}
+      </select>    
+      </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="">etest_p</label>
+      <select required="1" type="" name="etest_p" placeholder="etest_p" class="form-control" id="Amount" autocomplete="off">
+        {% for etest_p in etest_p %}
+          <option value="{{ etest_p }}">{{ etest_p }}</option>
+        {% endfor %}
+      </select>     
+      </div>
+    <div class="form-group col-md-6">
+      <label for="">MBA Percentage</label>
+      <select required="1" type="" name="mba_p" placeholder="MBA Percentage" class="form-control" id="Amount" autocomplete="off">
+        {% for mba_p in mba_p %}
+          <option value="{{ mba_p }}">{{ mba_p }}</option>
+        {% endfor %}
+      </select>     
+      </div>
+  </div>
+
+  
+  <button type="submit" name="submit" class="btn b-btn-primary">PREDICT</button>
+  </section>
+</form>
+</div>
+<br>
+<section id="s-texts">
+  <span class="border-left-0 border-right-0 border-primary sp">
+  <div class="container">
+    
+  </span>
+
+<div>
+    <h3 style="color: #763b4d; text-align: center; margin-top: 15px;"><em>Your Salary is </em>{{ c }}❤️ </h3>           
+</div>
+
+  </section>
+    </section>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </body>
+</html>
